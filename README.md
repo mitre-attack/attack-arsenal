@@ -1,8 +1,8 @@
-# Welcome to the ATTACK Aresnal
+# Welcome to the ATT&CK Arsenal
 
 This is a collection of red team and adversary emulation resources developed and released by MITRE.
 
-Content within ATTACK Aresenal may align or be derrived from many efforts including [ATT&CK](https://attack.mitre.org/), [ATT&CK Evaluations](https://attackevals.mitre.org/), [MITRE Engenuity](https://mitre-engenuity.org/), or other threat-informed defense research initiatives.
+Content within ATTACK Arsenal may align or be derrived from many efforts including [ATT&CK](https://attack.mitre.org/), [ATT&CK Evaluations](https://attackevals.mitre.org/), or other threat-informed defense research initiatives.
 
 ## Liability / Responsible Usage
 
