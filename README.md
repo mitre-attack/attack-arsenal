@@ -2,7 +2,7 @@
 
 This is a collection of red team and adversary emulation resources developed and released by MITRE.
 
-Content within ATT&CK Arsenal may align or be derrived from many efforts including [ATT&CK](https://attack.mitre.org/), [ATT&CK Evaluations](https://attackevals.mitre.org/), or other threat-informed defense research initiatives.
+Content within ATT&CK Arsenal may align or be derived from many efforts including [ATT&CK](https://attack.mitre.org/), [ATT&CK Evaluations](https://attackevals.mitre.org/), or other threat-informed defense research initiatives.
 
 ## Liability / Responsible Usage
 
