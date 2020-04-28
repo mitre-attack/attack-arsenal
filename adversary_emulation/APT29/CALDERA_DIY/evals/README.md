@@ -16,7 +16,7 @@ git clone https://github.com/mitre/caldera.git --recursive --branch 2.6.6 && sud
 
 2. Clone the Eval plugin into the caldera/plugins directory
 ```commandline
-cd plugins && git clone https://github.com/mitre/evals.git evals
+git clone https://github.com/mitre-attack/attack-arsenal.git && cp -R attack-arsenal/adversary_emulation/APT29/CALDERA_DIY/evals caldera/plugins/ && cd caldera
 ```
 
 3. Add the eval plugin to CALDERA config `conf/local.yml`
@@ -71,7 +71,7 @@ with the appropriate values for your environment. Keys to update include:
 #### Setting Up the CALDERA Server
 After initially cloning the CALDERA server, modify the ```conf/default.yml``` and set the CALDERA server's IP and port.
 
-* ```vim ../../conf/default.yml```
+* ```vim ./conf/default.yml```
 
 *Note, this is a relative path from the plugin's location.*
 
@@ -80,7 +80,7 @@ Prior to executing any of the commands listed below, certain payloads must be co
 To accomplish this, use the ```setup.py```. Python script located in the payloads directory of the evals’ plugin to dynamically 
 update the payloads to the appropriate IP and port.
 
-* ```python3 ./payloads/setup.py``` 
+* ```cd plugins/evals/ && python3 ./payloads/setup.py``` 
 
 
 ### Starting CALDERA
