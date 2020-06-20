@@ -53,7 +53,7 @@ This methodology assumes the following static IP address configurations:
 
 This evaluation utilizes four payloads that model APT29 malware.
 
-The payloads are customized varients of reverse shells from Pupy RAT and Metasploit.
+The payloads are customized variants of reverse shells from Pupy RAT and Metasploit.
 
 Pre-compiled payloads are available in the `payloads` directory; however, they are configured to connect back to static IP addresses 192.168.0.5 and 192.168.0.4.
 
@@ -77,7 +77,7 @@ sudo socat TCP-LISTEN:443,fork TCP:192.168.0.4:443 & sudo socat TCP-LISTEN:1234,
     *  `psversion.txt`
     *  `chrome-passwords.exe` (renamed as `accessChk.exe`)
     *  `strings64.exe` (compiled from `hostui.cpp`)
-4. Zip modified SysIntenralsSuite folder
+4. Zip modified SysinternalsSuite folder
 5. Install Pupy and Metasploit on Attack Platform by running `install_day1_tools.sh`
 6. Start Pupy docker container then the EC4 listener
     1. `sudo pupy/start-compose.sh`
