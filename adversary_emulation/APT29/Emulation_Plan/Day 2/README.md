@@ -17,7 +17,7 @@
 ## Overview
 
 *  Emulation of APT29 usage of tools such as PowerDuke, POSHSPY, CloudDuke, as well as more recent (2016+) TTPs
-*  Scenario begins with a target spearphishing leading into a low and slow, methodical approach to owning the intial target and eventually the entire domain
+*  Scenario begins with a target spearphishing leading into a low and slow, methodical approach to owning the initial target and eventually the entire domain
 *  Includes establishing persistence, credential gathering, local and remote enumeration, and data exfil
 *  Modular components (ex: PowerShell scripts) may be executed atomically
 
@@ -36,7 +36,7 @@
     * [ ] Loading and executing PowerShell scripts (.ps1)
     * [ ] Generating a DLL payload and an encoded PowerShell oneliner 
     * [ ] Receiving and maintaining multiple callbacks at once
-2.  Oneline OneDrive Account (https://onedrive.live.com/)
+2.  Online OneDrive Account (https://onedrive.live.com/)
 
 ## Red Team Setup
 
@@ -48,7 +48,7 @@
 3. The entire value (ex: `powershell -exec bypass -Noninteractive -windowstyle hidden -e WwBTAH...=`) into `-Value` variable (2nd line) in `stepFourteen_bypassUAC.ps1`
     *  ex: `New-Item -Force -Path "HKCU:\Software\Classes\Folder\shell\open\command" -Value "powershell -exec bypass -Noninteractive -windowstyle hidden -e WwBTAH...="`
 
-### Generate DLL payload, then on a seperate Windows host:
+### Generate DLL payload, then on a separate Windows host:
 1. [CMD] > `certutil -encode [file].dll blob`
 2. [CMD] > `powershell`
 3. [PS] > `$blob = (Get-Content .\blob) -join ""; $blob > .\blob`
@@ -56,17 +56,17 @@
 5. Delete new line at end of file and copy all (CTRL-A, CTRL-C)
 6. Paste value (ex: `-----BEGIN CERTIFICATE-----...-----END CERTIFICATE-----`) into `$bin` variable (6th line) in `schemas.ps1`
 
-### Copy payloads to C2 server (wherever is approapropriate your C2 framework to have access to these files)
+### Copy payloads to C2 server (wherever is appropriate for your C2 framework to have access to these files)
 
 ### Update `stepFourteen_credDump.ps1` -- directions are in file
 
-### Prepare intial access payloads:
-1.  Login in as non-domain admin user
-2.  Copy over the following files onto the Desktop of the intial victim:
+### Prepare initial access payloads:
+1.  Login as non-domain admin user
+2.  Copy over the following files onto the Desktop of the initial victim:
     1. `2016_United_States_presidential_election_-_Wikipedia.html`
     2. `make_lnk.ps1`
     3. `schemas.ps1`
-2.  Copy over `MITRE-ATTACK-EVALS.HTML` into the the Documents folder of the intial victim
+2.  Copy over `MITRE-ATTACK-EVALS.HTML` into the Documents folder of the initial victim
 3.  Execute `make_lnk.ps1` (Right click > Run with PowerShell), this will generate `37486-the-shocking-truth-about-election-rigging-in-america.rtf.lnk`
 4.  Drag `make_lnk.ps1` and `schemas.ps1` to Recycle Bin and empty the Recycle Bin (Right click > Empty Recycle Bin)
 
@@ -91,7 +91,7 @@
 #### 11.A
 
 1.  As non-domain admin user, execute `37486-the-shocking-truth-about-election-rigging-in-america.rtf.lnk` (double click), output will display in terminal
-2.  You will now recieve a new, low integrity callback
+2.  You will now receive a new, low integrity callback
 
 ### Step 12 - Fortify Access
 
@@ -134,7 +134,7 @@
 
 1.  Load `stepFourteen_bypassUAC.ps1`
 2.  Execute `bypass`
-3.  You will now recieve a new, high integrity callback
+3.  You will now receive a new, high integrity callback
 
 #### 14.B
     
@@ -197,7 +197,7 @@
 1.  Interact with low integrity callback
 2.  Load `stepSeventeen_email.ps1`
 3.  Execute `psemail`
-4.  
+
 #### 17.B
 
 1.  Interact with high integrity callback
