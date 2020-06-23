@@ -78,7 +78,7 @@
 3. Change network type to Domain (https://www.itechtics.com/change-network-type-windows-10/#2-_Setting_network_type_using_Windows_Registry)
 4. Set UAC to never notify (https://articulate.com/support/article/how-to-turn-user-account-control-on-or-off-in-windows-10)
 5. Enable WinRM (https://support.microsoft.com/en-us/help/555966)
-6. Enable UseLogonCredential in the WDigest Registry settings (https://support.microsoft.com/en-sg/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a)
+6. Enable UseLogonCredential in the WDigest Registry settings (https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a)
 
 ### For the initial victim (the workstation with Microsoft Outlook):
 1. Login as non-domain admin user
