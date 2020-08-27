@@ -21,7 +21,7 @@
             iwr -uri "https://download.sysinternals.com/files/SDelete.zip" -outfile sdelete64.zip;
             Expand-Archive sdelete64.zip -force;
           }
-          copy sdelete64\sdelete64.exe C:\Windows\Temp\;
+          copy sdelete64.exe C:\Windows\Temp\;
           cd C:\Windows\Temp\ ;
           .\sdelete64.exe /accepteula C:\Windows\Temp\Rar.exe;
           .\sdelete64.exe /accepteula C:\Users\#{profile_user}\AppData\Roaming\working.zip;
