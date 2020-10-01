@@ -3,8 +3,8 @@
 ## Overview
 
 This repository contains the evals plugin for [CALDERA](https://github.com/mitre/caldera/wiki).
-This [plugin](https://github.com/mitre/caldera/wiki/What-is-a-plugin) contains the TTPs used within the ATT&CK Evaluations round 2 (APT29) and round 1 (APT3).
-For more information see please see the [evaulations website](https://attackevals.mitre.org/about-attack-evaluations.html).
+This [plugin](https://caldera.readthedocs.io/en/latest/Learning-the-terminology.html#what-is-a-plugin) contains the TTPs used within the ATT&CK Evaluations round 2 (APT29) and round 1 (APT3).
+For more information, please see the [evaulations website](https://attackevals.mitre-engenuity.org/about).
 
 **Please read this README.md in its entirety to avoid missing crucial steps when executing an adversary.**
 
@@ -26,13 +26,13 @@ plugins:
 ```
 
 ## Round 2 Adversary
-The APT29 adversary is broken up into three separate CALDERA [adversaries](https://www.github.com/mitre/caldera/wiki/What-is-an-adversary) that execute commands in different phases.
+The APT29 adversary is broken up into three separate CALDERA [adversaries](https://caldera.readthedocs.io/en/latest/Learning-the-terminology.html#what-is-an-adversary) that execute commands in different phases.
 Under the operation panel you will see these phases listed as **APT29 - Day 1.A**, **APT29 - Day 1.B**, and **APT29 - Day 2**.
-Leverage the appropriate CALDERA [SANDCAT](https://github.com/mitre/caldera/wiki/Plugins-sandcat) [groups](https://github.com/mitre/caldera/wiki/What-is-a-group) for each operational phase.
-Prior to running an [operation](https://github.com/mitre/caldera/wiki/What-is-an-operation), please consult the environment setup steps below.
+Leverage the appropriate CALDERA [SANDCAT](https://caldera.readthedocs.io/en/latest/Plugin-library.html?highlight=sandcat#sandcat-54ndc47) [groups](https://caldera.readthedocs.io/en/latest/Learning-the-terminology.html#what-is-a-group) for each operational phase.
+Prior to running an [operation](https://caldera.readthedocs.io/en/latest/Learning-the-terminology.html#what-is-an-operation), please consult the environment setup steps below.
 
 ### Environment Setup - Evals Round 2 - APT29 
-Consult the [ATT&CK EVALUATION's Environment](https://attackevals.mitre.org/APT3/environment.html) web page for a reference guide on how to replicate the range environment.
+Consult the [ATT&CK EVALUATION's Environment](https://attackevals.mitre-engenuity.org/APT3/environment) web page for a reference guide on how to replicate the range environment.
 Ensure that all A/V is disabled within the environment to successfully replicate the EVALS environment.
 
 - On your day 2 initial host you will need to manually browse to ```C:\Windows\Temp``` via ```Windows Explorer``` and accept the prompt.
@@ -51,7 +51,7 @@ Requirements for the round 2 adversary are the following:
 **It is recommended that you first execute the evals plugin in an isolated-test environment to fully understand the TTPs performed on hosts, as well as the artifacts left behind.**
 
 #### Setting Up CALDERA Facts
-Next, update the [CALDERA facts](https://github.com/mitre/caldera/wiki/What-is-a-fact) located here ```./data/sources/4fb34bde-b06d-445a-a146-8e35f79ce546.yml```
+Next, update the [CALDERA facts](https://caldera.readthedocs.io/en/latest/Learning-the-terminology.html#what-is-a-fact) located here ```./data/sources/4fb34bde-b06d-445a-a146-8e35f79ce546.yml```
 with the appropriate values for your environment. Keys to update include:
 
 * Update ```target.domain.name``` to your environment's domain name.
@@ -93,7 +93,7 @@ Start a fresh instance of CALDERA.
 * ```python3 server.py --fresh```
 
 ### EVALs Round 2 - APT 29  Operation Steps
-The APT29 [adversary profile](https://github.com/mitre/caldera/wiki/What-is-an-adversary) is broken down into three separate adversary profiles.
+The APT29 [adversary profile](https://caldera.readthedocs.io/en/latest/Learning-the-terminology.html#what-is-an-adversary) is broken down into three separate adversary profiles.
 These profiles include **APT29 Day-1 A**, **APT29 Day-1 B - Lateral Movement**,  and **APT29 Day-2**. 
 To successfully replicate the ATT&CK evals process, an environment setup like the one outlined in the environment setup section is assumed.
 
@@ -141,7 +141,7 @@ Agent metadata can be viewed by clicking on the process id within the CALDERA in
 
 Now that we have verified the new agent exists, run a new operation using the **APT29 1.B - Lateral Movement** adversary profile.
 
---- 
+---
 
 #### APT29 Day 2
 The  APT29 Day-2 adversary profile expects a new agent to be run on a new machine as a non-elevated user. 
@@ -152,7 +152,7 @@ Copy the SANDCAT cradle as previously done and execute in a non-administrator Po
 After completing all adversary steps outlined above, RDPing into the target host should trigger additional persistence mechanisms.
 
 ## Issues?
-Please consult the [common problems](https://github.com/mitre/caldera/wiki/Common-problems) page on the CALDERA GitHub repo.
+Please consult the [common problems](https://caldera.readthedocs.io/en/latest/Common-problems.html) page on the CALDERA Read the Docs page.
 If you're still having issues, please open a git issue on the evals plugin page and follow the guidelines within ISSUES.md for reporting issues.
 
 ## Acknowledgements

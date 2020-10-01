@@ -1,8 +1,8 @@
 # APT29 Emulation
 
-This content was developed as part of the APT29 ATT&CK Evaluations and includes both the resources used to [manually execute the emulation](https://attackevals.mitre.org/APT29/scope.html) as well as a plug-in developed for [CALDERA](https://github.com/mitre/caldera).
+This content was developed as part of the APT29 ATT&CK Evaluations and includes both the resources used to [manually execute the emulation](https://attackevals.mitre-engenuity.org/APT29/scope) as well as a plug-in developed for [CALDERA](https://github.com/mitre/caldera).
 
-For more details about the APT29 ATT&CK Evaluations, including results, visit https://attackevals.mitre.org/APT29/
+For more details about the APT29 ATT&CK Evaluations, including results, visit https://attackevals.mitre-engenuity.org/APT29/
 
 ## Adversary Overview
 
