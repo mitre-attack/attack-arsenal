@@ -1,6 +1,8 @@
+*This content has been ported to https://github.com/center-for-threat-informed-defense/adversary_emulation_library as of January 2021. This format was preserved in [/Archive](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/apt29/Archive).*
+
 # APT29 Emulation
 
-This content was developed as part of the APT29 ATT&CK Evaluations and includes both the resources used to [manually execute the emulation](https://attackevals.mitre-engenuity.org/APT29/scope) as well as a plug-in developed for [CALDERA](https://github.com/mitre/caldera).
+This content was developed as part of the APT29 ATT&CK Evaluations and includes both the resources used to [manually execute the emulation](https://attackevals.mitre-engenuity.org/APT29/scope) as well as a plug-in developed for [CALDERA](https://github.com/mitre/caldera) (2.6.6).
 
 For more details about the APT29 ATT&CK Evaluations, including results, visit https://attackevals.mitre-engenuity.org/APT29/
 
